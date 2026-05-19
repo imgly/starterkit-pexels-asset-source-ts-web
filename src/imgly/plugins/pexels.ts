@@ -146,7 +146,9 @@ function transformToAssetResult(photo: PexelsPhoto): AssetResult {
       thumbUri: photo.src.medium,
       width: photo.width,
       height: photo.height,
-      blockType: '//ly.img.ubq/image',
+      blockType: '//ly.img.ubq/graphic',
+      fillType: '//ly.img.ubq/fill/image',
+      kind: 'image',
       uri: photo.src.original
     },
     credits: {
