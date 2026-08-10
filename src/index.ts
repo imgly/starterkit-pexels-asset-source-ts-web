@@ -76,7 +76,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load the Pexels demo scene from CDN
     // This scene showcases images that can be replaced with photos from Pexels
-    await cesdk.loadFromURL(resolveAssetPath('/assets/pexels.scene'));
+    await cesdk.load(resolveAssetPath('/assets/pexels.scene'));
   })
   .catch((error) => {
     // eslint-disable-next-line no-console
