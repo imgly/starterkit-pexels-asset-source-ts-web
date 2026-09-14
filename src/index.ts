@@ -22,7 +22,7 @@
  * });
  * ```
  *
- * @see https://img.ly/docs/cesdk/js/get-started/overview-e18f40/
+ * @see https://img.ly/docs/cesdk/js/getting-started/
  * @see https://www.pexels.com/api/documentation/
  */
 
@@ -30,7 +30,6 @@ import CreativeEditorSDK from '@cesdk/cesdk-js';
 
 import { initPexelsImageEditor } from './imgly';
 import { resolveAssetPath } from './imgly/resolveAssetPath';
-
 
 // ============================================================================
 // Configuration
@@ -77,7 +76,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load the Pexels demo scene from CDN
     // This scene showcases images that can be replaced with photos from Pexels
-    await cesdk.load(resolveAssetPath('/assets/pexels.scene'));
+    await cesdk.loadFromURL(resolveAssetPath('/assets/pexels.scene'));
   })
   .catch((error) => {
     // eslint-disable-next-line no-console
