@@ -29,7 +29,7 @@
 import CreativeEditorSDK from '@cesdk/cesdk-js';
 
 import { initPexelsImageEditor } from './imgly';
-import { resolveAssetPath } from './imgly/resolveAssetPath';
+import { DEMO_ASSETS_BASE_URL } from './imgly/demo-assets';
 
 
 // ============================================================================
@@ -66,8 +66,6 @@ const pexelsConfig = {
 
 CreativeEditorSDK.create('#cesdk_container', config)
   .then(async (cesdk) => {
-    // Debug access (remove in production)
-    (window as any).cesdk = cesdk;
 
     // Initialize the editor with Pexels integration
     await initPexelsImageEditor(cesdk, pexelsConfig);
@@ -77,7 +75,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load the Pexels demo scene from CDN
     // This scene showcases images that can be replaced with photos from Pexels
-    await cesdk.load(resolveAssetPath('/assets/pexels.scene'));
+    await cesdk.load(`${DEMO_ASSETS_BASE_URL}/assets/pexels.scene`);
   })
   .catch((error) => {
     // eslint-disable-next-line no-console
