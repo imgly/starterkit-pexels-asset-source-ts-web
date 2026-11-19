@@ -367,7 +367,7 @@ export class PexelsAssetSourcePlugin implements EditorPlugin {
         if (
           replaceIntent === 'fill' &&
           selectedBlocks.length === 1 &&
-          selectedBlocks[0].fillType === '//ly.img.ubq/fill/image'
+          selectedBlocks[0]?.fillType === '//ly.img.ubq/fill/image'
         ) {
           return ['pexels'];
         }
