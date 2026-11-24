@@ -51,7 +51,7 @@ const config = {
 
 // Option 1: Read from environment variables (recommended for new projects with .env)
 const pexelsConfig = {
-  pexelsApiKey: (undefined as string | undefined) as string | undefined
+  pexelsApiKey: import.meta.env.VITE_PEXELS_API_KEY as string | undefined
 };
 
 // Option 2: Direct configuration (for existing projects or custom setups)
